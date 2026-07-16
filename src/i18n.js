@@ -7,6 +7,7 @@ const translations = {
     events: "Events",
     contact: "Contact",
     welcome: "Welcome",
+    search: "Search",
     getStarted: "Get Started",
     learnMore: "Learn More",
     copyright: "© {year} Turkish Society of Nova Scotia"
@@ -19,6 +20,7 @@ const translations = {
     events: "Etkinlikler",
     contact: "İletişim",
     welcome: "Hoşgeldiniz",
+    search: "Ara",
     getStarted: "Başla",
     learnMore: "Daha Fazla",
     copyright: "© {year} Turkish Society of Nova Scotia"

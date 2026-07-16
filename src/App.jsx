@@ -169,7 +169,8 @@ function AppContent() {
             display: "flex",
             flexDirection: "column",
             padding: "16px",
-            boxShadow: "2px 0 12px rgba(0,0,0,0.3)"
+            boxShadow: "2px 0 12px rgba(0,0,0,0.3)",
+            overflowY: "auto"
           }} onClick={e => e.stopPropagation()}>
             <button
               onClick={() => setMobileMenuOpen(false)}
@@ -180,12 +181,48 @@ function AppContent() {
                 fontSize: "1.5rem",
                 cursor: "pointer",
                 padding: "8px",
-                marginBottom: "16px"
+                marginBottom: "12px"
               }}
               aria-label="Close menu"
             >
               ✕
             </button>
+
+            <button
+              onClick={() => {
+                alert("Search feature will be added soon.");
+                setMobileMenuOpen(false);
+              }}
+              style={{
+                width: "100%",
+                background: "rgba(255,255,255,0.1)",
+                border: "1px solid rgba(255,255,255,0.15)",
+                color: "white",
+                padding: "12px 10px",
+                borderRadius: "8px",
+                textAlign: "left",
+                marginBottom: "12px",
+                cursor: "pointer"
+              }}
+            >
+              🔍 {t(lang, "search") || "Search"}
+            </button>
+
+            <div style={{ display: "flex", gap: "8px", marginBottom: "16px" }}>
+              {supported.map(s => (
+                <button
+                  key={s}
+                  onClick={() => { changeLanguage(s); setMobileMenuOpen(false); }}
+                  className={"btn" + (s === lang ? " primary" : " ghost")}
+                  style={{
+                    flex: 1,
+                    padding: "10px"
+                  }}
+                >
+                  {s.toUpperCase()}
+                </button>
+              ))}
+            </div>
 
             <Link to="/" onClick={() => setMobileMenuOpen(false)} style={{ color: "white", textDecoration: "none", padding: "12px 8px", borderRadius: "6px", marginBottom: "8px", fontWeight: "600" }}>
               {t(lang, "home")}
@@ -228,22 +265,6 @@ function AppContent() {
             <a href="#" onClick={() => setMobileMenuOpen(false)} style={{ color: "white", textDecoration: "none", padding: "12px 8px", borderRadius: "6px", marginBottom: "16px", fontWeight: "600" }}>
               {t(lang, "contact")}
             </a>
-
-            <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", marginTop: "auto", paddingTop: "16px", display: "flex", gap: "8px" }}>
-              {supported.map(s => (
-                <button
-                  key={s}
-                  onClick={() => { changeLanguage(s); setMobileMenuOpen(false); }}
-                  className={"btn" + (s === lang ? " primary" : " ghost")}
-                  style={{
-                    flex: 1,
-                    padding: "10px"
-                  }}
-                >
-                  {s.toUpperCase()}
-                </button>
-              ))}
-            </div>
           </nav>
         </div>
       )}
