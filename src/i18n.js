@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    logo: "Turkish Society of Nova Scotia",
+    logo: "TSNS",
     home: "Home",
     about: "About",
     becomeAMember: "Member",
@@ -12,7 +12,7 @@ const translations = {
     copyright: "© {year} Turkish Society of Nova Scotia"
   },
   tr: {
-    logo: "Turkish Society of Nova Scotia",
+    logo: "TSNS",
     home: "Ana Sayfa",
     about: "Hakkında",
     becomeAMember: "Üye Ol",
