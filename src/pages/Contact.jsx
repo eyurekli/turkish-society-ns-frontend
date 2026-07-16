@@ -5,7 +5,9 @@ export default function ContactPage({ lang }) {
   const socials = [
     { name: "Instagram", href: "https://instagram.com/turkishsocietyofns" },
     { name: "Facebook", href: "https://www.facebook.com/turkishsocietyns" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/turkish-society-of-nova-scotia" }
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/turkish-society-of-nova-scotia" },
+    { name: "LinkTree", href: "https://www.linktr.ee/turkishsocietyofns" },
+
   ];
 
   const departments = [
